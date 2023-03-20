@@ -13,8 +13,7 @@ const body = document.querySelector("body");
 const images = ["0.jpg", "1.jpg", "2.jpg"];
 
 // 랜덤한 숫자값 0~2까지 생성
-const randomIndex = Math.floor(Math.random()*3);
+const randomIndex = Math.floor(Math.random()*images.length);
 
-
-body.style.backgroundImage = "url(./img/0.jpg)";
+body.style.backgroundImage = `url(./img/${images[randomIndex]})`;
 body.style.backgroundSize = "cover";
