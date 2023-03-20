@@ -5,32 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <!-- 시계 -->
     <h1 id = "clock">00:00:00</h1>
     <!-- 로그인 입력창 : 로그인 후 보이지않음-->
-    <form action="" id="login">
+    <form action="" id="login-form">
         <input id="login-id" type="text">
         <input id="login-button" type="submit" value="Login">
     </form>
     <!-- 인사 : 로그인 후에 보임 -->
-    <h1 id="greeting">환영합니다</h1>
+    <h1 id="greeting" class="hidden">환영합니다</h1>
 
     <!-- 할일 입력 -->
-    <form action="" id="memo-form">
+    <form action="" id="todo-form" class="hidden">
         <input type="text" placeholder="할일을 입력해주세요">
         <input type="submit" value="추가">
     </form>
 
     <!-- 할일 리스트가 입력될 공간 -->
-    <ul id="todolist">
-        <li>
-            <input type="checkbox" id="">
-            값
-            <button>X</button>
-        </li>
+    <ul id="todolist" class="hidden">
     </ul>
-    
+
+    <script src="./js/background.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/todolist.js"></script>
 </body>
 </html>
