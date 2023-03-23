@@ -1,0 +1,57 @@
+/* slider 디자인 */
+.slider{
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    width: 100%;
+    /* 빠져나온 2,3 slider-item을 화면에서 가려준다.*/
+    /* slider의 바깥으로 빠져나가는 slider item을 보이지않게함 */
+    overflow: hidden;
+}
+
+/* slider itme */
+.slider-item{
+    width: 100%;
+    height: 100vh;
+    /* flex의 컨테이너보다 item 크기가 클 때 넓이를 바뀌지 않게
+    사용 */
+    flex-shrink: 0;
+
+    /* slider-itme의 위치를 옮김 */
+    position: relative; 
+    /* left의 위치를 0, -100%, -200%씩 이동해서 이용*/
+    left: 0%;
+    /* 이동 애니메이션은 js에 정의되어있다. */
+    transition: all 0.5s;
+}
+
+/* slider-button 디자인 */
+
+.slider-button{
+    position: absolute;
+    top: 40%;
+    font-size: 5rem;
+}
+
+.prev{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
+
+/* 슬라이더 이미지 */
+
+.slider>.slider-item:nth-child(1){
+    background-image: url(../img/0.jpg);
+    background-size: cover;
+}
+
+.slider>.slider-item:nth-child(2){
+    background-image: url(../img/1.jpg);
+    background-size: cover;
+}
+.slider>.slider-item:nth-child(3){
+    background-image: url(../img/2.jpg);
+    background-size: cover;
+}

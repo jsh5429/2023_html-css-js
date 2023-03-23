@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/slider2.css">
+</head>
+<body>
+    <header class="header">
+        <!-- 고정 내비게이션 바 시작 -->
+        <nav class="nav" id="nav">
+            <div class="logo">GREEN</div>
+            <ul class="nav-menu">
+                <li><a href="#intro">소개</a></li>
+                <li><a href="#pictures">사진</a></li>
+                <li><a href="#news">뉴스</a></li>
+            </ul>
+        </nav>
+        <!-- 고정 내비게이션 바 끝-->
+    </header>
+    <main class="main">
+        <!-- 섹션1 배너(슬라이더) 시작 -->
+        <section class="banner">
+            <div class="slider">
+                <div class="slider-item">1</div>
+                <div class="slider-item">2</div>
+                <div class="slider-item">3</div>
+                <div class="slider-button prev" id="prev-button">&lt;</div>
+                <div class="slider-button next" id="next-button">&gt;</div>
+            </div>
+            <div class="scroll-icon"><a href="#intro">▼</a></div>
+        </section>
+        <!-- 섹션1 배너 끝-->
+        <!-- 섹션2 소개(스크롤이벤트) 시작-->
+        <a name="intro"></a>
+        <section class="intro-scroll" id="intro">
+            <div class="green-intro">
+                <h1>그린회사</h1>
+                <p>그린회사는 새로운 50년을 이끌어 갈 수 있도록 최선을 다하겠습니다.</p>
+            </div>
+            <div class="green-intro-image">
+                <div class="intro-image"></div>
+            </div>
+        </section>
+        <!-- 섹션2 소개(스크롤이벤트) 끝-->
+        <!-- 섹션3 사진(슬라이더 버튼) 시작-->
+        <a name="pictures"></a>
+        <section class="pictures">
+            <div class="picture-wrap">
+                <div class="picture-explain">
+                    <h1>사진설명</h1>
+                    <p>자세한 설명</p>
+                </div>
+                <div class="picture-buttons" id="slider2-buttons">
+                    <a class="on" href="">사진1</a>
+                    <a href="">사진2</a>
+                    <a href="">사진3</a>
+                </div>
+            </div>
+
+            <!-- 다른형태의 슬라이더 작성 -->
+            <div id="slider2" class="slider2">
+                <div class="slider2-item"></div>
+                <div class="slider2-item"></div>
+                <div class="slider2-item"></div>
+                <!--
+                <div class="slider2-dots">
+                    <div class="dot on"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                -->
+            </div>
+        </section>
+        <!-- 섹션3 사진 끝-->
+        <!-- 섹션4 뉴스(스크롤이벤트) 시작-->
+        <a name="news"></a>
+        <section class="news-scroll" id="news">
+            <h1>회사 동향</h1>
+            <div class="news-cards">
+                <div class="card">
+                    <div class="card-image-wrap">
+                        <div class="card-image"></div>
+                    </div>
+                    <div class="card-text">
+                        <p>보도자료</p>
+                        <h3>보도자료 제목</h3>
+                        <span>날짜</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image-wrap">
+                        <div class="card-image"></div>
+                    </div>
+                    <div class="card-text">
+                        <p>보도자료</p>
+                        <h3>보도자료 제목</h3>
+                        <span>날짜</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image-wrap">
+                        <div class="card-image"></div>
+                    </div>
+                    <div class="card-text">
+                        <p>보도자료</p>
+                        <h3>보도자료 제목</h3>
+                        <span>날짜</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image-wrap">
+                        <div class="card-image"></div>
+                    </div>
+                    <div class="card-text">
+                        <p>보도자료</p>
+                        <h3>보도자료 제목</h3>
+                        <span>날짜</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 섹션4 뉴스 끝 -->
+    </main>
+    <!-- 푸터 시작 -->
+    <footer class="footer">
+        <div>로고</div>
+        <div>
+            <p>전화번호</p>
+            <p>SNS</p>
+            <p>copyright</p>
+        </div>
+    </footer>
+    <!-- 푸터 끝-->
+    <script src="./js/scroll.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/slider2.js"></script>
+</body>
+</html>

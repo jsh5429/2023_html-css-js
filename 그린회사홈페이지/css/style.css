@@ -1,0 +1,253 @@
+/* 태그 디자인 */
+/* 태그 디자인 */
+/* 어딘가로 이동할때 스크롤바가 부드럽게 움직이게 한다.*/
+html{scroll-behavior: smooth;}
+a { color: black; text-decoration: none;}
+h1{font-size: 3rem; margin: 20px 0; font-weight: bold;}
+
+/* 헤더와 네비게이션바 */
+.header {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid black;
+    transition: all 1s;
+}
+.nav-menu {
+    display: flex;
+}
+.nav-menu li {
+    margin: 35px 20px;
+    /*li 태그안에 있는 모든 텍스트가 영향*/
+    font-size: 1.2rem;
+    transition: all 1s;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 스크롤이벤트가 발생했을때 바뀌는 네비게이션 디자인 */
+.nav.scrollon {
+    color: white;
+    background-color: black;
+    transition: all 1s;
+}
+.nav.nav.scrollon li>a {
+    color: white;
+    transition: all 1s;
+}
+
+
+
+/* 메인의 섹션*/
+section {
+    height: 600px;
+    
+}
+/* 섹션1 배너 */
+.banner {
+    height: 100vh;
+}
+
+.banner .scroll-icon{
+    position: absolute;
+    bottom: 50px; left: 50%;
+    font-size: 2rem;
+    animation-name: moving-icon;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.banner .scroll-icon a{
+    color: gray;
+}
+
+/* 아이콘이 위아래로 움직이는 애니메이션 작성 */
+@keyframes moving-icon {
+    0% { transform: translate(0,0);}
+    70%{ transform: translate(0,20px);}
+    100% { transform: translate(0,0);}
+}
+/* 섹션 2 소개 */
+.intro-scroll{
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,1)),
+    url(../img/2.jpg);
+    padding: 0 20px;
+    opacity: 0;
+}
+
+/* 이벤트로 클래스가 붙었을 때 디자인 */
+.intro-scroll.scrollon{
+    opacity: 1;
+    transition: all 2s;
+}
+
+.intro-scroll .green-intro{
+    height: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(-600px);
+}
+
+/* 이벤트 발생 시 추가되는 클래스*/
+.intro-scroll.scrollon .green-intro{
+    transform: translateX(0);
+    transition: all 2s;
+}
+
+.intro-scroll .green-intro-image{
+    width: 100vw;
+    /* inherit : 부모의 높이를 가져온다. */
+    height: inherit;
+}
+
+/* 섹션3 슬라이더 버튼 */
+.pictures{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+/* 버튼과 설명란을 감싸는 랩*/
+.pictures .picture-wrap{
+    padding: 20px 10px;
+}
+
+/* 사진 설명, 자세한 설명 */
+.pictures .picture-wrap .picture-explain{
+    margin-bottom: 40px;
+}
+
+/* 사진 버튼 디자인*/
+.pictures .picture-wrap .picture-buttons a{
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+/* 버튼에 on 클래스가 붙었을 때의 디자인*/
+.pictures .picture-wrap .picture-buttons a.on{
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+/* 섹션4 뉴스 */
+
+.news-scroll h1{
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* 뉴스 카드 */
+
+.news-cards{
+    display: grid;
+    margin: 0 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.card {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card .card-image-wrap{
+    height: 150px;
+    background-color: gray;
+    overflow: hidden;
+}
+
+.card .card-text{
+    padding: 20px;
+}
+
+.card .card-text h3{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.card .card-text p {
+    font-weight: bold;
+    color: rgb(64, 64, 147);
+}
+
+.card .card-text span {
+    color: gray;
+}
+
+/* 카드의 이미지 */
+.card .card-image-wrap .card-image{
+    height: inherit;
+    background-size: cover;
+}
+
+/* 카드에 마우스를 올렸을 때 전환 효과 */
+.card:hover .card-image-wrap .card-image{
+    transform: scale(1.2);
+    transition: all 0.5s;
+    filter: brightness(0.7);
+}
+
+/* scrollon이 추가되었을 때 보이는 전환 효과 */
+
+.news-scroll{
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.news-scroll.scrollon{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}
+
+/*
+.card .card-image-wrap .card-image:nth-child(1)는
+.card-image-wrap 안에서 .card-image가 첫번째인 것을 모두
+지정한다. 따라서 전부 한 그림이 동시에 들어가버린다.
+:nth-child(1) 사용할 때 그 시작점에 넣어주기
+*/
+.card:nth-child(1) .card-image-wrap .card-image{
+    background-image: url(../img/0.jpg);
+}
+
+.card:nth-child(2) .card-image-wrap .card-image{
+    background-image: url(../img/1.jpg);
+}
+
+.card:nth-child(3) .card-image-wrap .card-image{
+    background-image: url(../img/2.jpg);
+}
+
+.card:nth-child(4) .card-image-wrap .card-image{
+    background-image: url(../img/0.jpg);
+}
+/* 푸터 */
+.footer {
+    box-sizing: border-box;
+    height: 200px;
+    background-color: black;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+}
